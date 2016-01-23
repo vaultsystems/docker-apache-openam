@@ -4,8 +4,8 @@
     SSLCertificateKeyFile "/usr/local/apache2/conf/server.key"
 
     ProxyPreserveHost On
-    ProxyPass / http://test:8080/
-    ProxyPassReverse / http://test:8080/
+    ProxyPass / http://app:8080/
+    ProxyPassReverse / http://app:8080/
 
-    ServerName service.mysite.com.au
+    ServerName service.mysite.com
 </VirtualHost>
