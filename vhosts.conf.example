@@ -1,3 +1,11 @@
+Listen 80
+Listen 443
+LimitRequestFieldSize 102400
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+
 <VirtualHost *:443>
     SSLEngine On
     SSLCertificateFile "/usr/local/apache2/conf/server.crt"
